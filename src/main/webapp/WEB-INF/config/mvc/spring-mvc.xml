@@ -17,13 +17,13 @@
 	<context:component-scan base-package="com.cn.controller" />
 
 	<!--视图解释器 开始 -->
-	<bean id="viewResolver"
-		class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
-		<property name="prefix" value="/views/freemarker/" />
-		<property name="suffix" value=".html" />
-		<property name="contentType" value="text/html;charset=UTF-8"></property>
-		<property name="order" value="0" />
-	</bean>
+<!-- 	<bean id="viewResolver" -->
+<!-- 		class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver"> -->
+<!-- 		<property name="prefix" value="/views/freemarker/" /> -->
+<!-- 		<property name="suffix" value=".html" /> -->
+<!-- 		<property name="contentType" value="text/html;charset=UTF-8"></property> -->
+<!-- 		<property name="order" value="0" /> -->
+<!-- 	</bean> -->
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -32,4 +32,6 @@
 		<property name="order" value="1" />
 	</bean>
 	<!--视图解释器 结束 -->
+	
+	<mvc:annotation-driven/>
 </beans>
