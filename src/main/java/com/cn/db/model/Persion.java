@@ -1,4 +1,4 @@
-package com.cn.db.pojo;
+package com.cn.db.model;
 
 public class Persion {
 

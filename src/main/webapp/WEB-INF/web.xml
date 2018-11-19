@@ -10,6 +10,14 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns
         <param-value>/WEB-INF/config/spring-context.xml</param-value>
         <!-- classpath:application-context.xml -->
     </context-param>
+    
+    <context-param>  
+	    <param-name>log4jConfiguration</param-name>  
+	    <param-value>/WEB-INF/config/log/log4j2.xml</param-value>  
+	</context-param>
+	<listener>
+        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+    </listener>
 
     <!-- set character encoding spring -->
     <filter>

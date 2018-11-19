@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cn.db.dao.PersionMapper;
-import com.cn.db.pojo.Persion;
+import com.cn.db.model.Persion;
 import com.cn.service.PersonServie;
 
 @Service("personServie")
