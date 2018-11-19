@@ -8,4 +8,7 @@
         FROM persion p
         WHERE p.id = #{value}
     </select>  
+    <insert id="insert">
+    	INSERT XXXXXXX
+    </insert>
 </mapper>  

@@ -5,4 +5,6 @@ import com.cn.db.model.Persion;
 public interface PersonServie {
 
 	Persion getPersionById(Integer id);
+	
+	void addPersion(Persion persion);
 }

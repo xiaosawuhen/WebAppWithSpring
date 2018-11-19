@@ -17,4 +17,8 @@ public class DefaultPersonServie implements PersonServie{
 		return persionMapper.selectPersion(id);
 	}
 
+	public void addPersion(Persion persion) {
+		persionMapper.insert(persion);
+	}
+
 }

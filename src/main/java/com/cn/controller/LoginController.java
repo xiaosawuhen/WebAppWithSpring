@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.cn.db.model.Persion;
 import com.cn.service.PersonServie;
 
 @Controller
@@ -35,6 +36,15 @@ public class LoginController {
     	testValueList.add("testvalue02");
     	testValueList.add("testvalue03");
     	testValueList.add("testvalue04");
+    	
+    	System.out.println("=====================wnn=========================");
+    	
+    	
+    	Persion persion01 = new Persion();
+    	persion01.setName_test("test01");
+    	
+    	personServie.addPersion(persion01);
+    	
     	
     	mv.addObject("vaueList", testValueList);
     	
