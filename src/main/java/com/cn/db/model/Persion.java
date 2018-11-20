@@ -4,7 +4,11 @@ public class Persion {
 
 	private int id;
 	
-	private String name_test;
+	private String name;
+	
+	private String phone;
+	
+	private int points;
 
 	public int getId() {
 		return id;
@@ -14,12 +18,27 @@ public class Persion {
 		this.id = id;
 	}
 
-	public String getName_test() {
-		return name_test;
+	public String getName() {
+		return name;
 	}
 
-	public void setName_test(String name_test) {
-		this.name_test = name_test;
+	public void setName(String name) {
+		this.name = name;
 	}
-	
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public int getPoints() {
+		return points;
+	}
+
+	public void setPoints(int points) {
+		this.points = points;
+	}
 }

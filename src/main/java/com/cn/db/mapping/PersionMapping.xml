@@ -4,11 +4,41 @@
 <mapper namespace="com.cn.db.dao.PersionMapper" >  
     <select id="selectPersion" parameterType="java.lang.Integer" resultType="com.cn.db.model.Persion">  
         SELECT id AS id,
-        	name AS name_test
+        	name AS name,
+        	phone AS phone,
+        	points AS points
         FROM persion p
         WHERE p.id = #{value}
     </select>  
-    <insert id="insert">
-    	INSERT XXXXXXX
+    <select id="selectPersionList" resultType="com.cn.db.model.Persion">  
+        SELECT id AS id,
+        	name AS name,
+        	phone AS phone,
+        	points AS points
+        FROM persion p
+    </select>  
+    <insert id="insert" parameterType="com.cn.db.model.Persion">
+    	INSERT INTO persion 
+    	(
+    		name,
+    		phone,
+    		points
+    	) VALUES (
+    		#{name},
+    		#{phone},
+    		#{points}
+    	)
     </insert>
+    <update id="updateById" parameterType="com.cn.db.model.Persion">
+    	UPDATE persion
+    	   SET  name = #{name},
+    			phone = #{phone},
+    			points = #{points}
+    	 WHERE
+    		id = #{id}
+    </update>
+    <delete id="deleteById">
+    	DELETE FROM persion
+    	 WHERE id = #{id}
+    </delete>
 </mapper>  
