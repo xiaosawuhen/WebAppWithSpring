@@ -17,7 +17,7 @@
         	points AS points
         FROM persion p
     </select>  
-    <insert id="insert" parameterType="com.cn.db.model.Persion">
+    <insert id="insert" parameterType="com.cn.db.model.Persion" >
     	INSERT INTO persion 
     	(
     		name,

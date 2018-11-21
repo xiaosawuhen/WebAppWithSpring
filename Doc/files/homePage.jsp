@@ -23,12 +23,11 @@
 <script type="text/javascript" src="static/js/bootstrap.js"></script>
 <script type="text/javascript" src="static/js/lightbox-plus-jquery.min.js"></script>
 <script type="text/javascript" src="static/js/responsiveslides.min.js"></script>
-<script type="text/javascript" src="static/js/common.js"></script>
 </head>
 <body>
 	<div class="container">
 		<div class="insertArea">
-			<form action="persion/insert/string" method="post">
+			<form action="persion/insert" method="post">
 			  <div class="form-group">
 			    <label for="exampleInputEmail1">姓名</label>
 			    <input name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="姓名">
@@ -60,9 +59,8 @@
 							<td>${persion.phone}</td>
 							<td>${persion.points}</td>
 							<td>
-							<button class="editBtn" class="btn btn-default">编辑</button>
-							<button class="deleteBtn" class="btn btn-default">删除</button>
-							<input type="hidden" class="persionId" value="${persion.id}">
+							<button id="updateBtn" class="btn btn-default">更新</button>
+							<button id="deleteBtn" class="btn btn-default">删除</button>
 							</td>
 						</tr>
 					</c:forEach>
@@ -70,28 +68,5 @@
 			</table>
 		</div>
 	</div>
-	<script type="text/javascript">
-		$(".deleteBtn").on("click", function(){
-			var deleteBtn = $(this);
-			var persionId = deleteBtn.parent().find(".persionId").val();
-			var deleteUrl = "persion/delete/" + persionId;
-			SystemAjax.getJson(
-				deleteUrl,
-				function() {
-					deleteBtn.parent().parent().remove();
-					alert("数据已经被删除！");
-				},
-				function(event, XMLHttpRequest, ajaxOptions, thrownError) {
-					alert("删除发生异常！");
-				}
-			);
-		});
-
-		$(".editBtn").on("click", function(){
-			var editBtn = $(this);
-			var persionId = editBtn.parent().find(".persionId").val();
-			window.location.href = "persion/edit/" + persionId;
-		});
-	</script>
 </body>
 </html>
